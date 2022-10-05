@@ -28,7 +28,7 @@ services:
     hostname: MYSQL
     image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_ROOT_PASSWORD: password
       HOSTNAME: MYSQL
     volumes:
       - "./sql:/docker-entrypoint-initdb.d"

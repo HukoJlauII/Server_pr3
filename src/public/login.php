@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link href="style.css" media="screen" rel="stylesheet">
+    <link href="../public/style.css" media="screen" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -24,7 +25,8 @@
                     <span class="button__text">Log In Now</span>
                     <i class="button__icon fas fa-chevron-right"></i>
                 </button>
-                <p class="regtext"><a href= "register.php">Sign up now</a>!</p>
+                <br>
+                <p class="regtext"><a href= "../public/register.php">Sign up now</a>!</p>
             </form>
         </div>
         <div class="screen__background">

@@ -1,13 +1,13 @@
 <?php
-if(isset($_POST["register"])){
-    if(!empty($_POST['email']) && !empty($_POST['username']) && !empty($_POST['password'])) {
+if (isset($_POST["register"])) {
+    if (!empty($_POST['email']) && !empty($_POST['username']) && !empty($_POST['password'])) {
         $connection = new mysqli("MYSQL", "user", "password", "appDB");
-        $email=htmlspecialchars($_POST['email']);
-        $username=htmlspecialchars($_POST['username']);
-        $password=htmlspecialchars($_POST['password']);
-        $query_result = $connection->query("SELECT * FROM users WHERE username='".$username."'");
+        $email = htmlspecialchars($_POST['email']);
+        $username = htmlspecialchars($_POST['username']);
+        $password = htmlspecialchars($_POST['password']);
+        $query_result = $connection->query("SELECT * FROM users WHERE username='" . $username . "'");
         $result = $query_result->fetch_row();
-        if (!empty($result)){
+        if (!empty($result)) {
             echo '<script language="javascript">';
             echo 'alert("User with this username already exists")';
             echo '</script>';
@@ -20,7 +20,8 @@ if(isset($_POST["register"])){
             echo 'window.location.replace("login.php");';
             echo '</script>';
         }
-    }}
+    }
+}
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -48,10 +49,10 @@ if(isset($_POST["register"])){
                     <i class="login__icon fas fa-lock"></i>
                     <input type="password" id="password" name="password" class="login__input" placeholder="Password">
                 </div>
-                <button class="button login__submit">
-                    <span class="button__text">Sign up Now</span>
-                    <i class="button__icon fas fa-chevron-right"><input type="submit" id="register" name="register"></i>
-                </button>
+                <span class="button__text"> <i class="button__icon fas fa-chevron-right"><input
+                                class="button login__submit" type="submit" id="register" name="register"
+                                VALUE="Sign up"></i></span>
+
             </form>
         </div>
         <div class="screen__background">
