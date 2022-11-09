@@ -22,6 +22,15 @@ CREATE TABLE IF NOT EXISTS phone
     PRIMARY KEY (ID)
 );
 
+CREATE TABLE IF NOT EXISTS files (
+                                     ID INT(11) NOT NULL  AUTO_INCREMENT,
+                                     content LONGBLOB NOT NULL,
+                                     author VARCHAR(32) NOT NULL,
+                                     file_name VARCHAR(256) NOT NULL,
+                                     `type` VARCHAR(256) NOT NULL,
+                                     PRIMARY KEY (ID)
+);
+
 INSERT INTO phone (name,description,price) VALUES ('Samsung gallaxy note 4','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, diam in consequat iaculis, est purus iaculis mauris, imperdiet facilisis ante ligula at nulla.',400);
 INSERT INTO phone (name,description,price) VALUES ('Nokia Lumia 1320','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, diam in consequat iaculis, est purus iaculis mauris, imperdiet facilisis ante ligula at nulla.',899);
 INSERT INTO phone (name,description,price) VALUES ('Samsung Galaxy s5- 2015','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, diam in consequat iaculis, est purus iaculis mauris, imperdiet facilisis ante ligula at nulla.',700);
