@@ -1,4 +1,3 @@
-
 <?php
 $ru_lang = ["Наименование", "Автор", "Скачать", "Добавить файл", "Светлая", "Темная", "Русский", "Английский", "Файл", "Загрузить", "*Клик*", "Введите свое имя:", "Язык", "Тема", "Обменник", "Сменить имя"];
 $en_lang = ["Name", "Author", "Download", "Add File", "Light", "Dark", "Russian", "English", "File", "Upload", "*Click*", "Enter your name:", "Language", "Theme", "Exchanger", "Change name"];
@@ -15,6 +14,8 @@ if ($_COOKIE['theme'] == 'dark')
     $theme = $dark_theme;
 else
     $theme = $light_theme;
+
+session_start();
 
 
 
@@ -79,7 +80,6 @@ function  getName($string){
     echo '</script>';
 }
 
-session_start();
 $con = new mysqli("MYSQL", "user", "password", "appDB");
 
 
