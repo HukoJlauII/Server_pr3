@@ -70,7 +70,7 @@ $sx = imagesx($stamp);
 $sy = imagesy($stamp);
 
 
-imagecopy($gdImgHandler, $stamp, imagesx($gdImgHandler) - $sx - $marge_right, imagesy($gdImgHandler) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
+imagecopy($gdImgHandler, $stamp, imagesx($gdImgHandler) - $sx, imagesy($gdImgHandler) - $sy, 0, 0, imagesx($stamp), imagesy($stamp));
 //выводим рисунок
 Header("Content-Type: image/png");
 ImagePNG($gdImgHandler);

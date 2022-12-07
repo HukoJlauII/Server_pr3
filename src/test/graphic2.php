@@ -34,7 +34,7 @@ $graph = new Graph(800, 600, 'auto', 10, true);
 $graph->SetScale('textlin');
 
 // Фон графика зальем градиентом:
-$graph->SetBackgroundGradient('ivory', 'orange');
+$graph->SetBackgroundGradient('green', 'yellow');
 
 
 // Создаём один столбик

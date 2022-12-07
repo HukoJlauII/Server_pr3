@@ -77,7 +77,7 @@ $lineplot->mark->SetType(MARK_FILLEDCIRCLE);
 $lineplot->value->Show();
 
 // Фон графика зальем градиентом:
-$graph->SetBackgroundGradient('ivory', 'orange');
+$graph->SetBackgroundGradient('red', 'orange');
 
 // Придадим графику тень:
 
